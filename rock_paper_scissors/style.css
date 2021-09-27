@@ -1,0 +1,150 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  background-color: #112031;
+  color: #D4ECDD;
+  font-family: 'Times New Roman', Times, serif;
+}
+.container {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100%;
+}
+.hero-section{
+  text-align: center;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid #888888;
+}
+.hero-section h1{
+  font-size: 3rem;
+  font-weight: 600;
+  background-color: transparent;
+}
+.result {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1.5em;
+}
+.score-section {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.5em;
+  width: 60%;
+  margin: 0 auto;
+}
+.score-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+.score-section-container i {
+  font-size: 5rem;
+  font-weight: 900;
+}
+.score-section-container i::before {
+  font-family: "Font Awesome 5 Free";
+}
+.icons {
+  margin: auto;
+  text-align: center;
+  margin-top: 3em;
+}
+.icons button {
+  margin: 2em;
+  padding: 2em 3em;
+  border-radius: 0.5em;
+  border: 0.1rem solid #fff;
+  opacity: 80%;
+}
+.icons button:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1.1);
+  transition: ease-out 300ms;
+  
+}
+.icons button i {
+  background: transparent;
+  font-size: 3rem;
+}
+.icons button i::before {
+  font-family: "Font Awesome 5 Free";
+  background: transparent;
+}
+.fas {
+  visibility: hidden;
+  pointer-events: none;
+}
+.fas.active {
+  visibility: visible;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 1em;
+}
+
+/* MODALS UI */
+.modal {
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  padding: 3em;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 300ms ease-in-out;
+  border-radius: 0.3em;
+  border: 2px solid #D4ECDD;
+  text-align: center;
+}
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal .message {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+.modal button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  border: 0.1rem solid #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0.7;
+}
+.modal button:hover {
+  opacity: 1;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+.overlay.active {
+  display: block;
+}
