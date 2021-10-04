@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Calculator - The Odin Project</h1>
+  </header>
+  <main class="main">
+    <div class="calculator">
+      <div class="screen">
+        <div class="screen-last" id="lastOperationScreen"></div>
+        <div class="screen-current" id="currentOperationScreen"></div>
+      </div>
+        <button data-number class="number" >7</button>
+        <button data-number class="number" >8</button>
+        <button data-number class="number" >9</button>
+        <button data-clear-last class="operator" >C</button>
+        <button data-all-clear class="operator" id="AC">AC</button>
+        <button data-number class="number" >4</button>
+        <button data-number class="number" >5</button>
+        <button data-number class="number" >6</button>
+        <button data-operator class="operator" >÷</button>
+        <button data-operator class="operator" >x</button>
+        <button data-number class="number" >1</button>
+        <button data-number class="number" >2</button>
+        <button data-number class="number" >3</button>
+        <button data-operator class="operator" >+</button>
+        <button data-operator class="operator" >-</button>
+        <button data-negative-positive class="operator" >+/-</button>
+        <button data-number class="number" >0</button>
+        <button data-number class="operator" >.</button>
+        <button data-operator class="large-btn" >=</button>
+    </div>
+    <div class="warning-content">
+      <p class="warning"></p>
+    </div>
+  </main>
+  <footer>
+    <p>Copyright © 2021 Tinfinity69</p>
+    <a href="https://github.com/dpthinh910" target="_blank">
+      <i class="fab fa-github"></i>
+    </a>
+  </footer>
+  <script src="script.js" defer></script>
+</body>
+</html>

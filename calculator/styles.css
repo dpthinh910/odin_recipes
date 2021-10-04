@@ -1,0 +1,147 @@
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+:root {
+  --primary-light: #F0F5F9;
+  --secondary-light: #C9D6DF;
+  --primary-dark: #1E2022;
+  --secondary-dark: #52616B;
+  --dark-blue-shade: #112D4E;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+body {
+  box-sizing: inherit;
+  color: var(--primary-light);
+  background-color: var(--primary-dark);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+header {
+  text-align: center;
+  margin: 3em 1em;
+}
+
+main {
+  -webkit-box-flex: 0;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.calculator {
+  background-color: var(--secondary-dark);
+  border: none;
+  border-radius: 7px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 0.5em;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: minmax(150px, auto) repeat(4, 1fr);
+  height: 80vw;
+  margin: 2em auto;
+  max-height: 500px;
+  max-width: 450px;
+  width: 80vw;
+}
+
+/* Style output screen */
+
+.screen {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  word-wrap: break-word;
+  word-break: break-all;
+  padding: 1em;
+}
+.screen > *:nth-child(1){
+  opacity: 0.6;
+}
+.screen > *:nth-child(2){
+  color: var(--primary-light);
+  font-size: 2rem;
+}
+
+/* Clear default button styling */
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* Custom style buttons */
+
+.calculator > button {
+  border-radius: 7px;
+  border: 1px solid var(--secondary-light);
+  background-color: var(--primary-dark);
+  opacity: 0.9;
+}
+
+.calculator > button:hover,
+.calculator > button:active {
+  opacity: 1;
+}
+.calculator > button.operator:hover,
+.calculator > button.operator:active {
+  color: var(--primary-light);
+  opacity: 1;
+}
+
+
+button.number {
+  background-color: var(--secondary-light);
+  color: var(--secondary-dark);
+}
+
+button.operator {
+  background-color: var(--secondary-dark);
+  color: var(--secondary-light);
+}
+
+.large-btn {
+  grid-column: span 2;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 1.1rem;
+  margin-bottom: 1.5em;
+}
+i {
+  color: var(--primary-light);
+  font-size: 1.4rem;
+  transition: transform 300ms ease-in-out;
+  opacity: 0.8;
+}
+i::before {
+  content: "\f35a";
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+}
+i:hover {
+  transform: rotate(360deg) scale(1.2);
+  opacity: 1;
+}
