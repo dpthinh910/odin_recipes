@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" type="text/css">
+  <title>Book Library</title>
+</head>
+<body>
+  <header>
+    <h1>My Book Library</h1>
+  </header>
+  <main>
+    <div class="library">
+      <button class="btn btn-primary btn-big btn-add" id="addBookBtn">Add new book</button>
+    </div>
+    <div class="books-grid" id="booksGrid"></div>
+  </main>
+  <footer>
+    <p>Copyright © by Tinfinity69 </p>
+  </footer>
+  <div class="modal" id="addBookModal">
+    <form class="book-form" id="addBookForm">
+      <h3 class="big-title">Add new book</h3>
+      <input class="input" type="text" id="title" name="title" placeholder="Title" required />
+      <p class="error-msg" id="errorMsg"></p>
+      <input class="input" type="text" id="author" name="author" placeholder="Author" required>
+      <input class="input" type="number" id="pages" placeholder="pages" required>
+      <div class="is-read">
+        <label for="is-read">Have you read it?</label>
+        <input type="checkbox" id="isRead" class="checkbox">
+      </div>
+      <button class="btn btn-primary btn-medium" type="submit">Add</button>
+    </form>
+  </div>
+  <div class="overlay" id="overlay"></div>
+  <script src="script.js" defer></script>
+</body>
+</html>
